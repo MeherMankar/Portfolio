@@ -1,29 +1,26 @@
-<!-- index.html -->
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <!-- Add Font Awesome for icons -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meher Mankar - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
-<!-- Add animated background -->
-<div class="animated-bg"></div>
 
-
-<body>
 <header>
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
     <h1>Meher Mankar</h1>
     <p>Web Developer | Designer | Music Lover</p>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
 </header>
 
-<!-- Add IDs to sections for navigation -->
 <section id="about">
     <h2>About Me</h2>
     <p>Hello! I'm a passionate web developer with a love for creating beautiful and functional websites. I enjoy exploring new technologies and continuously improving my skills.</p>
@@ -32,45 +29,36 @@
 <section id="contact">
     <h2>Contact Information</h2>
     <ul>
-        <li>Email: <a href="mailto:mirrorbot01@gmail.com">mirrorbot01@gmail.com</a></li>
-        <li>Telegram: <a href="https://t.me/MeherMankar">@MeherMankar</a></li>
-        <li>GitHub: <a href="https://github.com/MeherMankar">github.com/MeherMankar</a></li>
-        <li>LinkedIn: <a href="https://linkedin.com/in/yourusername">linkedin.com/in/yourusername</a></li>
-        <li>Spotify Playlist: <a href="https://open.spotify.com/playlist/5ohw7IojcBPjS6PqEhG6Qm">My Playlist</a></li>
+        <li><i class="fas fa-envelope"></i> Email: <a href="mailto:mirrorbot01@gmail.com">mirrorbot01@gmail.com</a></li>
+        <li><i class="fab fa-telegram"></i> Telegram: <a href="https://t.me/MeherMankar">@MeherMankar</a></li>
+        <li><i class="fab fa-github"></i> GitHub: <a href="https://github.com/MeherMankar">github.com/MeherMankar</a></li>
+        <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/yourusername">linkedin.com/in/yourusername</a></li>
+        <li><i class="fab fa-spotify"></i> Spotify Playlist: <a href="https://open.spotify.com/playlist/5ohw7IojcBPjS6PqEhG6Qm">My Playlist</a></li>
     </ul>
 </section>
 
 <section id="projects">
     <h2>Projects</h2>
-    <ul>
-        <li><strong>Project Title 1:</strong> Brief description of your project. <a href="https://github.com/yourusername/project1">View on GitHub</a></li>
-        <li><strong>Project Title 2:</strong> Brief description of your project. <a href="https://github.com/yourusername/project2">View on GitHub</a></li>
-        <!-- Add more projects as needed -->
-    </ul>
+    <div class="project-card">
+        <strong>Project Title 1:</strong>
+        <p>Brief description of your project.</p>
+        <a href="https://github.com/yourusername/project1">View on GitHub</a>
+    </div>
+    <div class="project-card">
+        <strong>Project Title 2:</strong>
+        <p>Brief description of your project.</p>
+        <a href="https://github.com/yourusername/project2">View on GitHub</a>
+    </div>
+    <!-- Add more projects as needed -->
 </section>
 
 <footer>
-    <p>© 2023 Meher Mankar. All rights reserved.</p>
+    <p>&copy; 2023 Meher Mankar. All rights reserved.</p>
 </footer>
 
+<!-- Back to Top Button -->
+<button id="backToTop" onclick="topFunction()" style="display:none;">&#8679;</button>
 
-<!-- Add this CSS for animated background -->
-<style>
-.animated-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #007BFF, #6C757D);
-    background-size: 400% 400%;
-    z-index: -1;
-    animation: gradientBG 15s ease infinite;
-}
-
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-</style>
+<script src="script.js"></script>
+</body>
+</html>
