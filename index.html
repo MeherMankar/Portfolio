@@ -1,45 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- index.html -->
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meher Mankar - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
+<!-- Add animated background -->
+<div class="animated-bg"></div>
 
-<nav>
-    <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
 
+<body>
 <header>
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
     <h1>Meher Mankar</h1>
     <p>Web Developer | Designer | Music Lover</p>
 </header>
 
+<!-- Add IDs to sections for navigation -->
 <section id="about">
     <h2>About Me</h2>
     <p>Hello! I'm a passionate web developer with a love for creating beautiful and functional websites. I enjoy exploring new technologies and continuously improving my skills.</p>
-</section>
-
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="card">
-        <h3>Project Title 1</h3>
-        <p>Brief description of your project.</p>
-        <a href="https://github.com/yourusername/project1" class="button">View on GitHub</a>
-    </div>
-    <div class="card">
-        <h3>Project Title 2</h3>
-        <p>Brief description of your project.</p>
-        <a href="https://github.com/yourusername/project2" class="button">View on GitHub</a>
-    </div>
-    <!-- Add more projects as needed -->
 </section>
 
 <section id="contact">
@@ -53,13 +40,37 @@
     </ul>
 </section>
 
+<section id="projects">
+    <h2>Projects</h2>
+    <ul>
+        <li><strong>Project Title 1:</strong> Brief description of your project. <a href="https://github.com/yourusername/project1">View on GitHub</a></li>
+        <li><strong>Project Title 2:</strong> Brief description of your project. <a href="https://github.com/yourusername/project2">View on GitHub</a></li>
+        <!-- Add more projects as needed -->
+    </ul>
+</section>
+
 <footer>
-    <p>&copy; 2023 Meher Mankar. All rights reserved.</p>
+    <p>© 2023 Meher Mankar. All rights reserved.</p>
 </footer>
 
-<!-- Back to Top Button -->
-<button id="backToTop" onclick="topFunction()" style="display:none;">Back to Top</button>
 
-<script src="script.js"></script>
-</body>
-</html>
+<!-- Add this CSS for animated background -->
+<style>
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #007BFF, #6C757D);
+    background-size: 400% 400%;
+    z-index: -1;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+</style>
