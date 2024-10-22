@@ -69,3 +69,32 @@ li {
 
 .project-card:hover {
     transform: scale(1.02);
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 0.7);
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 80px; /* Adjusted to avoid collision with footer */
+    right: 30px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
