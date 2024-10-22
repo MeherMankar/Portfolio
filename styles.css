@@ -1,146 +1,111 @@
-* {
-    box-sizing: border-box;
-}
+/* styles.css */
 
+/* Typography */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGJhY2tncm91bmR8ZW58MHx8fHwxNjc0ODQ5MjA3&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center fixed;
     background-size: cover;
+    color: #333;
+}
+
+/* Color Scheme */
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #6C757D;
+    --background-color: rgba(255, 255, 255, 0.8);
+    --text-color: #333;
+    --header-background: rgba(51, 51, 51, 0.7);
+    --footer-background: rgba(51, 51, 51, 0.7);
+}
+
+header, footer {
+    background-color: var(--header-background);
     color: #fff;
 }
 
-nav {
-    position: sticky;
-    top: 0;
-    background-color: rgba(51, 51, 51, 0.8);
-    padding: 15px;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none; /* Added to remove bullets */
-    padding-left: 0; /* Ensure no padding */
-}
-
-nav li {
-    margin: 0 20px;
-}
-
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-header {
-    text-align: center;
-    padding: 50px;
-    background-color: rgba(51, 51, 51, 0.7);
-}
-
-section {
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 800px;
-    background-color: rgba(255, 255, 255, 0.9);
-    color: black;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.card {
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
 h2 {
-    color: #007BFF;
-}
-
-ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-li {
-    margin-bottom: 10px;
+    color: var(--primary-color);
 }
 
 a {
-    color: #007BFF;
-    text-decoration: none;
+    color: var(--primary-color);
 }
 
 a:hover {
     text-decoration: underline;
 }
 
-.button {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #007BFF;
-    color: white;
-    border-radius: 5px;
+/* styles.css */
+
+/* Navigation Bar */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--header-background);
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
     text-decoration: none;
+    padding: 10px 20px;
+    display: block;
 }
 
-footer {
-    text-align: center;
-    margin-top: 20px;
-    padding: 20px;
-    background-color: rgba(51, 51, 51, 0.7);
-}
-
-#backToTop {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
+nav ul li a:hover {
+    background-color: var(--primary-color);
     border-radius: 5px;
-    padding: 10px;
-    display: none; /* Initially hidden */
+}
+
+/* Project Cards */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+li {
+    background-color: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    flex: 1 1 calc(50% - 40px);
+    transition: transform 0.3s;
+}
+
+li:hover {
+    transform: translateY(-10px);
+                          }
+
+/* styles.css */
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body {
+    animation: fadeIn 1s ease-in;
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 1.8em;
-    }
-
+@media (max-width: 768px) {
     nav ul {
         flex-direction: column;
-        align-items: center;
-        margin-bottom: 15px;
-        padding-left: 0; /* Ensure no padding */
-        width: 100%; /* Full width for mobile */
     }
 
-    .card {
-        width: calc(100% - 40px);
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 20px; 
-        padding-right: 20px; 
-        transition-duration: .3s; 
-        transition-property: transform; 
-        transition-timing-function: ease-in-out; 
-        border-radius: .5rem; 
-        box-shadow: .1rem .1rem .5rem rgba(0,0,0,.5); 
-        background-color:#fff; 
-        color:black; 
-        opacity:.9; 
-        overflow:hidden; 
-      }
+    li {
+        flex: 1 1 100%;
+    }
 }
+
