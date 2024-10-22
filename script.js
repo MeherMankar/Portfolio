@@ -11,6 +11,9 @@ function scrollFunction() {
 }
 
 function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+    // Smooth scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+// Add event listener for the button click
+document.getElementById("backToTop").addEventListener("click", topFunction);
