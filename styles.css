@@ -47,32 +47,6 @@ section {
 }
 
 .project-card {
-    margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 8px;
-    background-color: rgba(230, 230, 230, 0.9);
-}
-
-h2 {
-    color: #007BFF;
-}
-
-ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-body {
-    background-image: url('./image/pexels-felixmittermeier-956981.jpg'); /* Set a default background image */
-    background-size: cover; /* Cover the entire body */
-    transition: background-image 0.5s ease; /* Smooth transition for background image change */
-}
-
-.project-card {
     border: 2px solid transparent; /* Initial border */
     border-radius: 8px; /* Rounded corners */
     transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
