@@ -67,7 +67,7 @@ li {
 }
 
 body {
-    background-image: url('default-background.jpg'); /* Set a default background image */
+    background-image: url('./image/pexels-felixmittermeier-956981.jpg'); /* Set a default background image */
     background-size: cover; /* Cover the entire body */
     transition: background-image 0.5s ease; /* Smooth transition for background image change */
 }
