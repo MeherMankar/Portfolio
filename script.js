@@ -18,11 +18,16 @@ function topFunction() {
 // Function to change background image
 function changeBackgroundImage() {
     const images = [
-        'background1.jpg',
-        'background2.jpg',
-        'background3.jpg',
-        'background4.jpg',
-        'background5.jpg'
+        './image/IMG_20241111_171030_035.jpg',
+        './image/IMG_20241111_171028_509.jpg',
+        './image/IMG_20241111_171004_020.jpg',
+        './image/IMG_20241111_171002_817.jpg',
+        './image/IMG_20241111_170932_117.jpg',
+        './image/IMG_20241111_170929_570.jpg',
+        './image/IMG_20241111_170854_302.jpg',
+        './image/IMG_20241111_170852_446.jpg',
+        './image/IMG_20241111_170825_698.jpg',
+        './image/IMG_20241111_170824_997.jpg'
     ]; // Array of image URLs
     const randomImage = images[Math.floor(Math.random() * images.length)]; // Pick a random image
     document.body.style.backgroundImage = url('${randomImage}'); // Set the background image
