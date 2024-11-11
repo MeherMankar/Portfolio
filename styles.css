@@ -47,44 +47,23 @@ section {
 }
 
 .project-card {
-    border: 2px solid transparent; /* Initial border */
-    border-radius: 8px; /* Rounded corners */
-    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
-    padding: 20px; /* Add some padding for content */
-    margin: 10px; /* Space between cards */
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgba(230, 230, 230, 0.9);
 }
-
-.project-card:hover {
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8); /* Glowing effect on hover */
+h2 {
+    color: #007BFF;
 }
-
-/* Responsive styles */
-@media (max-width: 600px) {
-    section {
-        padding: 10px; /* Reduce padding on smaller screens */
-    }
+ul {
+    list-style-type: none;
+    padding-left: 0;
 }
-
-/* Back to Top Button Styles */
-#backToTop {
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    display: none; /* Hidden by default */
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
+li {
+    margin-bottom: 10px;
 }
-
-/* Media Queries */
-@media (max-width: 600px) {
-    nav ul li {
-        display: block; /* Stack links vertically on smaller screens */
-        margin-bottom: 10px;
-    }
-    section {
-        padding: 10px; /* Reduce padding on smaller screens */
-    }
+body {
+    background-image: url('./image/pexels-felixmittermeier-956981.jpg'); /* Set a default background image */
+    background-size: cover; /* Cover the entire body */
+    transition: background-image 0.5s ease; /* Smooth transition for background image change */
 }
