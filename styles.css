@@ -9,12 +9,13 @@ body {
     background: url('./image/pexels-felixmittermeier-956981.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
+    transition: background-image 0.5s ease; /* Smooth transition for background image change */
 }
 
 header {
     text-align: center;
     padding: 50px;
-    background-color: rgba(51, 51, 51, 0.7);
+        background-color: rgba(51, 51, 51, 0.7);
 }
 
 nav ul {
@@ -40,7 +41,7 @@ section {
     margin: 20px auto;
     padding: 20px;
     max-width: 800px;
-        background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     color: black;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -51,19 +52,35 @@ section {
     padding: 15px;
     border-radius: 8px;
     background-color: rgba(230, 230, 230, 0.9);
+    transition: transform 0.3s ease; /* Smooth scaling effect */
 }
+
+.project-card:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
 h2 {
     color: #007BFF;
 }
+
 ul {
     list-style-type: none;
     padding-left: 0;
 }
+
 li {
     margin-bottom: 10px;
 }
-body {
-    background-image: url('./image/pexels-felixmittermeier-956981.jpg'); /* Set a default background image */
-    background-size: cover; /* Cover the entire body */
-    transition: background-image 0.5s ease; /* Smooth transition for background image change */
+
+/* Back to Top Button Styles */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    display: none; /* Hidden by default */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
 }
