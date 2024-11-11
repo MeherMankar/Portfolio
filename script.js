@@ -36,4 +36,8 @@ function changeBackgroundImage() {
 // Call the function on page load
 window.onload = function() {
     changeBackgroundImage();
+
+    // Add click event to the button
+    const backToTopButton = document.getElementById("backToTop");
+    backToTopButton.onclick = topFunction; // Set the click event for the button
 };
