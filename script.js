@@ -11,41 +11,37 @@ function scrollFunction() {
 }
 
 function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 
-// Function to change background image
-function changeBackgroundImage() {
-    const images = [
-        './image/IMG_20241111_171030_035.jpg',
-        './image/IMG_20241111_171028_509.jpg',
-        './image/IMG_20241111_171004_020.jpg',
-        './image/IMG_20241111_171002_817.jpg',
-        './image/IMG_20241111_170932_117.jpg',
-        './image/IMG_20241111_170929_570.jpg',
-        './image/IMG_20241111_170854_302.jpg',
-        './image/IMG_20241111_170852_446.jpg',
-        './image/IMG_20241111_170825_698.jpg',
-        './image/IMG_20241111_170824_997.jpg'
-    ]; // Array of image URLs
-    const randomImage = images[Math.floor(Math.random() * images.length)]; // Pick a random image
-    document.body.style.backgroundImage = `url('${randomImage}')`; // Set the background image
+// Dark Mode Toggle Logic
+const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
+
+// Check for saved theme in localStorage
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    body.classList.add(savedTheme);
 }
 
-// Add dark mode toggle
-function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-}
+darkModeToggle.addEventListener('click', () => {
+    if (body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('theme', '');
+    } else {
+        body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark-mode');
+    }
+});
 
-// Add event listener for dark mode toggle
-document.getElementById('darkModeToggle').onclick = toggleDarkMode;
-
-// Call the function on page load
-window.onload = function() {
-    changeBackgroundImage();
-
-    // Add click event to the button
+// Initialize back to top button
+window.addEventListener('load', function() {
     const backToTopButton = document.getElementById("backToTop");
-    backToTopButton.onclick = topFunction; // Set the click event for the button
-};
+    backToTopButton.addEventListener('click', topFunction);
+    
+    // Set background image
+    document.body.style.backgroundImage = "url('./image/Galaxy.jpg')";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundAttachment = "fixed";
+});
