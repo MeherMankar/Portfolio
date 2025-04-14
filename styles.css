@@ -84,3 +84,27 @@ li {
     border-radius: 5px;
     padding: 10px;
 }
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: rgba(33, 33, 33, 0.7);
+}
+
+body.dark-mode section {
+    background-color: rgba(48, 48, 48, 0.8);
+    color: #e0e0e0;
+}
+
+body.dark-mode nav a {
+    color: #90caf9;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}

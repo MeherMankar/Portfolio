@@ -30,8 +30,16 @@ function changeBackgroundImage() {
         './image/IMG_20241111_170824_997.jpg'
     ]; // Array of image URLs
     const randomImage = images[Math.floor(Math.random() * images.length)]; // Pick a random image
-    document.body.style.backgroundImage = url('${randomImage}'); // Set the background image
+    document.body.style.backgroundImage = `url('${randomImage}')`; // Set the background image
 }
+
+// Add dark mode toggle
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+}
+
+// Add event listener for dark mode toggle
+document.getElementById('darkModeToggle').onclick = toggleDarkMode;
 
 // Call the function on page load
 window.onload = function() {
